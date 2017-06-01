@@ -1,0 +1,15 @@
+*.py[cod]
+.pyc
+/logs
+__pycache__/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.log
+local_settings.py
+
+# celery beat schedule file
+celerybeat-schedule
+db.sqlite3
+geckodriver.log
