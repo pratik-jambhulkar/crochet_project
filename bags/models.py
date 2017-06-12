@@ -1,7 +1,8 @@
 from django.db import models
 
-# Create your models here.
-
 
 class Product(models.Model):
-    name = models.TextField(default='')
+    name = models.CharField(default='', max_length=50)
+    description = models.TextField(default='')
+    model = models.CharField(default='', max_length=50)
+    price = models.IntegerField(default=0)

@@ -1,9 +1,20 @@
 from selenium import webdriver
+import unittest
 
-browser = webdriver.Firefox()
 
-browser.get('http://localhost')
+class NewVisitorTest(unittest.TestCase):
 
-assert 'Django' in browser.title
+    def setUp(self):
+        self.browser = webdriver.Firefox()
 
-browser.quit()
+    def tearDown(self):
+        self.browser.quit()
+
+    def test_can_see_a_list_of_bags(self):
+        # Edith has heard about a cool new crochet bags store online. She goes
+        # to check out its homepage
+        self.browser.get('http://localhost')
+
+        # She notices the page title and header mention dreamy crochet
+        self.assertIn('Dreamy Crochet', self.browser.title)
+        self.fail('Finish the test!')
