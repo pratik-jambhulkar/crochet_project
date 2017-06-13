@@ -17,4 +17,8 @@ class NewVisitorTest(unittest.TestCase):
 
         # She notices the page title and header mention dreamy crochet
         self.assertIn('Dreamy Crochet', self.browser.title)
+
+        # She then notices the list of categories that she can click on
+        # The categories have a name and a thumbnail of a product that comes
+        # under it.
         self.fail('Finish the test!')
