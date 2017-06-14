@@ -18,7 +18,15 @@ class NewVisitorTest(unittest.TestCase):
         # She notices the page title and header mention dreamy crochet
         self.assertIn('Dreamy Crochet', self.browser.title)
 
+        # She is invited to enter a to-do item straight away
+        # header = self.browser.find_element_by_id('id_new_item')
+        # self.assertEqual(
+        #     inputbox.get_attribute('placeholder'),
+        #     'Enter a to-do item'
+        # )
+
         # She then notices the list of categories that she can click on
         # The categories have a name and a thumbnail of a product that comes
         # under it.
+
         self.fail('Finish the test!')
