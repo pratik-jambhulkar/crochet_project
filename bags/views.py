@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from bags.models import Category
 
 
 def home_page(request):
-    return render(request, 'home.html')
+    categories = Category.objects.all()
+    return render(request, 'home.html', {'categories': categories})

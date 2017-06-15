@@ -3,10 +3,14 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField(default='', max_length=50)
-    thumbnail = models.URLField(default='')
+    thumbnail = models.URLField(default='', max_length=500)
+    description = models.TextField(null=True, max_length=500)
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        ordering = ['name']
 
 
 class Product(models.Model):
@@ -20,7 +24,7 @@ class Product(models.Model):
         on_delete=models.CASCADE,
         default=1
     )
-    thumbnail = models.URLField(default='')
+    thumbnail = models.URLField(default='', max_length=500)
 
     def __str__(self):
         return self.name
@@ -32,4 +36,4 @@ class Photos(models.Model):
         on_delete=models.CASCADE,
         default=1
     )
-    photo_url = models.URLField(default='')
+    photo_url = models.URLField(default='', max_length=500)

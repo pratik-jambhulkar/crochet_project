@@ -24,6 +24,7 @@
           color: #1abc9c !important;
       }
     </style>
+    {% block style %} {% endblock %}
   </head>
 
   <body>
@@ -52,5 +53,6 @@
           </div>
         </div>
       </nav>
+      {% block main_section %}{% endblock %}
   </body>
 </html>
